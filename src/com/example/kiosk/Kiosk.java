@@ -16,6 +16,7 @@ public class Kiosk {
 
         while (true) {
             try {
+                //카테고리 목록 출력
                 System.out.println("\n[ MAIN MENU ]");
                 for (int i = 0; i < menus.size(); i++) {
                     System.out.println((i + 1) + ". " + menus.get(i).getCategories());
@@ -28,6 +29,7 @@ public class Kiosk {
                     return;
                 }
 
+                //선택한 카테고리의 메뉴 출력
                 menus.get(inputSelectedCategory - 1).printMenu();
                 System.out.println("0. 뒤로가기");
 
@@ -36,8 +38,9 @@ public class Kiosk {
                     continue;
                 }
 
+                //선택한 메뉴 아이템 출력 (toString() 오버라이딩)
                 System.out.print("선택한 메뉴 : ");
-                System.out.println(menus.get(inputSelectedCategory - 1).getMenuItems().get(inputSelectedItem - 1).toString());
+                System.out.println(menus.get(inputSelectedCategory - 1).getMenuItems().get(inputSelectedItem - 1));
 
             } catch (InputMismatchException e) {
                 System.out.println("잘못된 입력입니다. 숫자를 입력해주세요");

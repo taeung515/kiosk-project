@@ -22,7 +22,7 @@ public class Menu {
     public void printMenu() {
         System.out.println("\n[ " + categoryName.toUpperCase() + " MENU ] ");
         for (int i = 0; i < menuItems.size(); i++) {
-            System.out.println((i+1) + ". " + menuItems.get(i).toString());
+            System.out.println((i+1) + ". " + menuItems.get(i)); //MenuItem toString()오버라이딩
         }
     }
 }
