@@ -23,4 +23,9 @@ public class MenuItem {
     public String getDescription() {
         return description;
     }
+
+    @Override
+    public String toString() {
+        return name + "    | W " + price + " |  " + description;
+    }
 }
