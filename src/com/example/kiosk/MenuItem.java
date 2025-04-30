@@ -2,11 +2,13 @@ package com.example.kiosk;
 
 public class MenuItem {
 
+    private final int idx;
     private final String name;
     private final double price;
     private final String description;
 
-    public MenuItem(String name, double price, String description) {
+    public MenuItem(int idx, String name, double price, String description) {
+        this.idx = idx;
         this.name = name;
         this.price = price;
         this.description = description;
@@ -20,12 +22,8 @@ public class MenuItem {
         return price;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
     @Override
     public String toString() {
-        return name + "    | W " + price + " |  " + description;
+        return idx + ". " + name + "    | W " + price + " |  " + description;
     }
 }

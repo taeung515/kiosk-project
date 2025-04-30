@@ -3,26 +3,30 @@ package com.example.kiosk;
 import java.util.List;
 
 public class Menu {
+    private final int idx;
     private final String categoryName;
     private final List<MenuItem> menuItems;
 
-    public Menu(String categoryName, List<MenuItem> menuItems) {
+    public Menu(int idx, String categoryName, List<MenuItem> menuItems) {
+        this.idx = idx;
         this.categoryName = categoryName;
         this.menuItems = menuItems;
-    }
-
-    public String getCategories() {
-        return categoryName;
     }
 
     public List<MenuItem> getMenuItems() {
         return menuItems;
     }
 
+    public void printCategories() {
+        System.out.println(idx + ". " + categoryName);
+    }
+
     public void printMenu() {
         System.out.println("\n[ " + categoryName.toUpperCase() + " MENU ] ");
-        for (int i = 0; i < menuItems.size(); i++) {
-            System.out.println((i+1) + ". " + menuItems.get(i)); //MenuItem toString()오버라이딩
+        for (MenuItem menuItem : menuItems) {
+            System.out.println(menuItem); //MenuItem toString()오버라이딩
         }
+        System.out.println("0. 뒤로가기");
     }
+
 }
