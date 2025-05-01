@@ -27,9 +27,10 @@ public class Main {
         desserts.add(new MenuItem(2, "Fruits", 8.9, "딸기, 바나나 등"));
         menus.add(new Menu(3, "Desserts", desserts));
 
+        Display display = new Display();
         ShoppingCart cart = new ShoppingCart();
-        //Kiosk 클래스 start() 시작하는 기능 호출
-        Kiosk kiosk = new Kiosk(menus, cart);
+        //Kiosk (menus, cart, display) 시작
+        Kiosk kiosk = new Kiosk(menus, cart, display);
         kiosk.start();
     }
 }

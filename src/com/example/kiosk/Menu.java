@@ -17,16 +17,11 @@ public class Menu {
         return menuItems;
     }
 
-    public void printCategories() {
+    public void getCategory() {
         System.out.println(idx + ". " + categoryName);
     }
 
-    public void printMenu() {
-        System.out.println("\n[ " + categoryName.toUpperCase() + " MENU ] ");
-        for (MenuItem menuItem : menuItems) {
-            System.out.println(menuItem); //MenuItem toString()오버라이딩
-        }
-        System.out.println("0. 뒤로가기");
+    public String getCategoryName() {
+        return categoryName;
     }
-
 }
